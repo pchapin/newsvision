@@ -1,0 +1,32 @@
+#
+# This is a sample configuration file for nnweb. Copy this file to
+# nnweb.cfg and edit it as appropriate. You must specify values for
+# all configuration items mentioned below. In many cases the values
+# shown in this file are appropriate and will not need editing.
+#
+# This file consists of a collection of (name, value) pairs. Blank
+# lines are ignored as is all material in comments. Spaces are allowed
+# around the '=' in a (name, value) declaration.
+
+# The absolute path in the file system to nnweb's installation.
+BASE_PATH = /home/pchapin/public_html/nnweb
+
+# The absolute URL to nnweb's installation as seen from the web.
+BASE_URL = http://dustdevil-lnx/~pchapin/nnweb
+
+# The relative path to the master index file.
+MASTER_INDEX = master.idx
+
+# The relative path to the post counter file.
+COUNTER_FILE = counter.txt
+
+# The relative path/URL to folder where messages are contained. It
+# must have a trailing directory delimitor.
+#
+MESSAGE_FOLDER = posts/
+
+# The relative path/URL for getting from the message folder back to
+# the installation folder. It must have a trailing directory
+# delimiter.
+#
+REVERSE_MESSAGE_FOLDER = ../

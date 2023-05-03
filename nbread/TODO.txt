@@ -1,0 +1,15 @@
+
++ Numerous (minor?) bugs related, I suppose, to the multiple, partial ports of the program that
+  have been done since its original creation. It would be good to set up a bug tracking system
+  (Mantis?) to help manage the bugs for this project and any other project in a similar state.
+
++ Port to Open Watcom?
+
++ Create some unit tests.
+
++ Write some documentation.
+
++ Does it make sense to evolve this project into a general purpose newsreader? It could be cool
+  to support both NNTP and local groups simultaneously.
+
++ The built-in editor is horrible. Surely there is something better that could be used.

@@ -1,0 +1,58 @@
+++++
+The file 'nbnotify.cpp' is a separate program from nbread. It was used to check for new notices
+on the noticeboards.
+
+++++
+Added Open Watcom project files but the program doesn't compile with Open Watcom v1.4 due to
+issues with the compiler. It could be attempted again once the compiler has been fixed/upgraded.
+
+++++
+The program crashes when it terminates. This is due to a static destruction ordering problem.
+Visual C++ v8 provides only multithreaded libraries and so the String class is compiled for
+thread support. This is fine as far as it goes but it means that it is using the "Big String
+Lock" (a global object in str.cpp). Thus if there are any other global strings in the program
+there is a risk that they will be constructed or destroyed in the wrong order. (This appears to
+be happening).
+
+I "fixed" the problem for the String objects in global.cpp by making them pointers and
+explicitly initializing them with dynamic allocations at the start of WinMain. However, there is
+still a problem in config.cpp where a global list of Strings is created. I'm not sure of the
+best way to resolve this problem. Possibilities include:
+
+  1. Change config.cpp so that it does not use a global list of strings. Perhaps the interface
+     to the module should be changed to a class. This would allow multiple configuration objects
+     to coexist in the program. A pointer to such an object could be maintained in global.cpp.
+
+  2. Remove String and use std::string instead. Technically this might not eliminate the problem
+     but probably it will. It could be argued that the way String handles multiple threads is
+     bad anyway. The program might be better off without it.
+
+  3. Since the program is currently single threaded (outside of the library at least), it should
+     be possible to force the compilation of a single threaded version of String that doesn't
+     use the Big String Lock and thus avoid the whole problem.
+
+I don't like option #3 because we might want to introduce multiple threads in a later version of
+nbread. Option #2 is attractive, but I rather like the idea of exercising String to encourage
+it's development. Thus I favor option #1. The config module came from C and is not very C++-ish
+anyway. It could stand being reworked.
+
+Peter
+
+++++
+The path to the NetWare library files:
+
+s:\ec\nwsdk\lib\win32\borland\netwin32.lib
+s:\ec\nwsdk\lib\win32\borland\calwin32.lib
+
+When compiling on the network, these files must be included in the project as well.
+
+When compiling on the network, the paths in the project definition need to be changed. The
+include path needs to have s:\ec\nwsdk\include in it.
+
+++++
+Rough description of the debug levels in NBread:
+
+   1. In WinMain()
+   2. In the window procedures.
+   3. In helper functions called by the window procedures.
+   4. In the member functions of the NB_Topic and NB_Notice classes.

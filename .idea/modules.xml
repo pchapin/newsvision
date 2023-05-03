@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Jabber/Jabber.iml" filepath="$PROJECT_DIR$/Jabber/Jabber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jibber/Jibber.iml" filepath="$PROJECT_DIR$/Jibber/Jibber.iml" />
+    </modules>
+  </component>
+</project>

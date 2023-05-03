@@ -1,0 +1,97 @@
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+"Critical issues" in rough order of priority.
+
+1. The fixed width font in the notice window should be something different than it currently is.
+
+2. Window sizes and positions should be remembered in the .cfg file. When the program
+   initializes it should restore the window size and positions to what they were when the
+   program last exited.
+
+3. When a notice is posted it should immediately appear in the list of notices for its topic and
+   it should be marked as read.
+
+4. Fixed width fonts in the posting dialog.
+
+5. Supress extra headers.
+
+6. The number of objects in each topic should be a new column in the list view.
+
+7. The number of unread notices in such topic should be displayed in the list view.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Full issues list in no particular order.
+
++ It should be possible to insert a text file into a posting while the posting is being
+  composed.
+
++ Selecting "Cancel" on the configuration dialog (when it appears at program start up) should
+  gracefully exit the program.
+
++ There should be a proper icon in the upper left corner of the posting dialog box.
+
++ The close gadget on the posting dialog box should behave like "Cancel". Right now it does
+  nothing.
+
++ Upgrade the handling of the NetWare API so that it uses non-obsolete functions and also
+  doesn't rely on bindery emulation.
+
++ It should support the printing of notices.
+
++ There should not be any flickering when scrolling the notice window.
+
++ It should allow users to cut and paste text between the notice window and the clipboard.
+
++ The posting dialog should be such that the area for posting can be expanded.
+
++ Signature files should be supported.
+
++ The method for coming up with unique file names for new postings should be improved.
+
++ The subtopics should be displayed and navigated using a tree view control.
+
++ It should be possible to set fonts in the various windows.
+
++ Should there be a "wrap lines" option in the notice window?
+
++ The unimplemented menu items should be implemented.
+
++ It should be possible to configure notification for various noticeboards and not just a few of
+  them.
+
++ nbread.hst should be read-only.
+
++ Allow the name and location of the history file to be configurable.
+
++ The checked and unchecked icons should look better.
+
++ The main nbread icon should look better.
+
++ Tabs should be expanded into spaces in the notice window.
+
++ It should list notice files that have no attributes set (and not just the 'A' attribute!).
+  This appears to only be a problem under Windows NT.
+
++ When MDI child windows are closed and reopened, they should return to the size and position
+  they had before.
+
++ When the topic or edit window is maximized, the min/max/close controls vanish.
+
++ It should support "horizontal" tiling of the MDI child windows.
+
++ The boundary between the subtopics and the notices in the topic window should be adjustable.
+
++ You should be able to select a notice by double clicking on any part of its row in the topic
+  window. (The selection logic should also allow for easy stepping through the notices with the
+  arrow keys).
+
++ Sorting should work. The user should be able to change the sort direction by clicking on the
+  list view columns.
+
++ Add a toolbar for easy selection of certain options (next notice, post, etc).
+
++ Allow user to configure so that only certain topics are displayed.
+
++ Check for new notices periodically.
+
++ Support attachments.

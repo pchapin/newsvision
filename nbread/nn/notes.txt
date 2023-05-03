@@ -1,0 +1,49 @@
+
++++++
+August 18, 1997
+
+I instrumented the program so that it should produce a (hopefully)
+useful error message when/if it fails to get a user's name from the NDS.
+In that event it will prompt the user for the necessary information thus
+allowing the program to run normally.
+
++++++
+August 4, 1997
+
+I created a FSE version of the LC program. It is possible to select
+which version you want by setting appropriate #define symbols at the top
+of the file. I have not yet approached the problem of the "unknown" user
+names that come up at (apparently) random times.
+
++++++
+July 20, 1997
+
+I'm trying to compile this beast using Borland C++ v5.01 at home. I
+brought the .LIB and .H files from the SDK here but when I link it under
+the IDE I get an out of memory error. I can link it from the command
+line (using an IDE generated makefile) but it seems to use 30 MBytes of
+virtual memory when I do that. I can only assume that DOS support with
+this compiler is buggy -- or at least not very efficient!
+
+I don't know how I'm going to get things done in the time I have
+allocated. I'll try to find a way. I sent Charlie a version of this
+program that *should* be identical to the current LC program except that
+the changes outlined below have been made and I compiled it with Borland
+v5.01.
+
++++++
+May 13, 1997
+
+I've started the process of overhauling this very old, patched together
+program. Today I moved the entire program to C++, updated the timer
+module to my Timer class, updated scr.c to portscr.cpp, threw out
+local.h and replaced it with environ.h/standard.h, and got the whole
+thing to compile and link again. It wouldn't link at first because it was
+running out of memory in DGROUP (required more than 64 KBytes). This was
+because of the large number of "topics" supported (1000) and the large
+number of messages per topic (1000) supported. I lowered both of those
+numbers to 256 so that it would link. Charlie felt that those values
+were appropriate.
+
+Next: Review the code and clean it up what's here.
+

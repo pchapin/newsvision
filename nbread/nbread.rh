@@ -1,0 +1,79 @@
+/****************************************************************************
+FILE          : nbread.rh
+LAST REVISION : January 2000
+SUBJECT       : 
+PROGRAMMER    : (C) Copyright 2000 by VTC Computer Club
+
+This header file contains resource identifiers for use by both the
+resource compiler and the C++ compiler.
+
+
+REVISION HISTORY
+
++ January 22, 2000: Formally put under the GPL.
+
+
+LICENSE
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANT-
+ABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public
+License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+Please send comments or bug reports to
+
+     VTC^3
+     c/o Peter Chapin
+     Vermont Technical College
+     Randolph Center, VT 05061
+     VTC3-L@vtc.vsc.edu
+****************************************************************************/
+
+/* Icon identifiers. */
+#define MAIN_ICON  	1
+#define TOPIC_ICON 	2
+#define NOTICE_ICON	3
+#define CHECKED_ICON    4
+#define UNCHECKED_ICON  5
+
+
+/* Dialog box identifiers. */
+#define POST_DIALOG     1
+#define POST_SUBJECT    100
+#define POST_BODY       101
+#define POST_OK         102
+#define POST_CANCEL     103
+#define STATIC_SUBJECT  500  /* Identifiers of the static text in the dialog box. */
+#define STATIC_BODY     501
+
+#define CONFIG_DIALOG   2
+#define CONFIG_OK       100
+#define CONFIG_CANCEL   101
+#define CONFIG_NAME     102
+#define CONFIG_ADDRESS  103
+#define STATIC_NAME     500
+#define STATIC_ADDRESS  501
+
+/* Menu identifiers. */
+#define MAIN_MENU       1
+#define MENU_CONFIGURE  100
+#define MENU_EXIT  	101
+#define MENU_POST       102
+#define MENU_MARKALL    103
+#define MENU_MARKSELECTED 104
+#define MENU_FOLLOWUP   105
+#define MENU_DEBUG      106
+#define MENU_TILE	107
+#define MENU_CASCADE	108
+#define MENU_ARRANGE	109
+#define MENU_HELP	110
+

@@ -1,0 +1,29 @@
+
+TO-DO:
+
+ + Process all "TODO" items in the various *.java files. 
+
+ + Start implementing NNTP commands.
+
+ + Create a UML model for this program.
+
+ + I'm not sure of the best way to terminate the server. Right now I arrange for things to get
+   shut down in a purely sequential manner. However, which should be shut down first: the spool
+   or the console? The spool might want to use the console for outputting messages. The console
+   might want to use the spool for an active spool management command.
+
+ + Need to look into precisely how to deal with authentication. Should follow RFC-2980... but
+   how can the Java program confirm passwords against the VTC domain controller?
+
+ + Might want to make the ConnectionListener class abstract to make life easier when (if) we
+   want to support multiple network protocols (IPv6?) as well as multiple simultaneous listening
+   ports.
+
+ + The reading and writing of the newsgroups file in SimpleSpool should be cleaned up. Right now
+   it's pretty fragile. I assume the format is basically correct. Considering that the
+   newsgroups file is likely to get edited manually some day that is a bad assumption.
+
+ + In several places (console input in Jibber.java, NNTP input in ConnectionHandler.java, and
+   newsgroups file I/O in SimpleSpool.java) I try to read a stream a line at a time. I do this
+   "manually". Probably there is a better way. At the very least I should call a common method
+   -- even if a method of my own construction.

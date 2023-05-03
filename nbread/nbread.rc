@@ -1,0 +1,87 @@
+/****************************************************************************
+FILE          : nbread.rc
+LAST REVISION : January 2000
+SUBJECT       : Resource script for nbread.
+PROGRAMMER    : (C) Copyright 2000 by VTC Computer Club
+
+
+REVISION HISTORY
+
++ January 22, 2000: Formally put under the GPL.
+
+
+LICENSE
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANT-
+ABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public
+License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+Please send comments or bug reports to
+
+     VTC^3
+     c/o Peter Chapin
+     Vermont Technical College
+     Randolph Center, VT 05061
+     VTC3-L@vtc.vsc.edu
+****************************************************************************/
+
+#include <windows.h>
+#include "nbread.rh"
+
+/* Bring in resource definitions that are important to the debugging module. */
+#include "windebug.rc"
+
+/* Icons */
+MAIN_ICON      ICON      	"bread.ico"
+NOTICE_ICON    ICON		"notice.ico"
+TOPIC_ICON     ICON		"topic.ico"
+CHECKED_ICON   ICON             "checked.ico"
+UNCHECKED_ICON ICON             "unchecked.ico"
+
+/* Menus */
+MAIN_MENU     MENU
+{
+  POPUP "&File"
+  {
+    MENUITEM "&Configure",     MENU_CONFIGURE
+    MENUITEM SEPARATOR
+    MENUITEM "E&xit",          MENU_EXIT
+  }
+
+  POPUP "&Topic"
+  {
+    MENUITEM "&Post...",               MENU_POST
+    MENUITEM "&Mark All As Read",      MENU_MARKALL
+    MENUITEM "Mark &Selected As Read", MENU_MARKSELECTED
+  }
+
+  POPUP "&Notice"
+  {
+    MENUITEM "&Followup...",      MENU_FOLLOWUP
+  }
+
+  MENUITEM "&Debug",           MENU_DEBUG
+
+  POPUP "&Window"
+  {
+    MENUITEM "&Tile",          MENU_TILE
+    MENUITEM "&Cascade",       MENU_CASCADE
+    MENUITEM "&Arrange Icons", MENU_ARRANGE
+  }
+  MENUITEM "&Help",            MENU_HELP
+}
+
+/* Dialogs */
+rcinclude post.dlg
+rcinclude config.dlg
+
